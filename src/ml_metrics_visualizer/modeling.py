@@ -40,9 +40,10 @@ SUPPORTED_MODELS: dict[str, ModelFactory] = {
         random_state=random_state,
     ),
     "Random Forest": lambda random_state: RandomForestClassifier(
-        n_estimators=200,
+        n_estimators=100,
         class_weight="balanced",
         random_state=random_state,
+        n_jobs=-1,
     ),
 }
 
@@ -245,4 +246,3 @@ def build_prediction_table(
     if y_score is not None:
         table.insert(2, "positive_probability", np.round(y_score, 4))
     return table.reset_index(drop=True)
-
