@@ -1,0 +1,18 @@
+{
+  "source": "Kaggle Student Alcohol Consumption dataset",
+  "kaggle_dataset": "uciml/student-alcohol-consumption",
+  "kaggle_url": "https://www.kaggle.com/datasets/uciml/student-alcohol-consumption",
+  "rows": 1044,
+  "columns": 32,
+  "target": "passed",
+  "target_rule": "passed = yes when final grade G3 >= 10 else no",
+  "removed_leakage_columns": [
+    "G1",
+    "G2",
+    "G3"
+  ],
+  "class_counts": {
+    "yes": 814,
+    "no": 230
+  }
+}
